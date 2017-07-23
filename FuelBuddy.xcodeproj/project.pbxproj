@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		633DD58A1F1C989600CF899D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DD5891F1C989600CF899D /* Font.swift */; };
+		633DD58C1F1CDD8400CF899D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DD58B1F1CDD8400CF899D /* GradientView.swift */; };
+		633DD58E1F1CEFA400CF899D /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DD58D1F1CEFA400CF899D /* SearchTextField.swift */; };
+		633DD5921F1D08BD00CF899D /* Fuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DD5911F1D08BD00CF899D /* Fuel.swift */; };
+		634DB3A11F1B88C500310973 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634DB3A01F1B88C500310973 /* MapViewController.swift */; };
+		634DB3A31F1B903200310973 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634DB3A21F1B903200310973 /* ListViewController.swift */; };
+		634DB3A51F1B98F500310973 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634DB3A41F1B98F500310973 /* ColorPalette.swift */; };
+		637E22BA1F220F3400BD45AE /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E22B91F220F3400BD45AE /* DateHelper.swift */; };
+		637E22BC1F221BEA00BD45AE /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E22BB1F221BE900BD45AE /* MarkerView.swift */; };
+		637E22C01F2248C700BD45AE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E22BF1F2248C700BD45AE /* LoginViewController.swift */; };
+		637E22C21F224D4800BD45AE /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E22C11F224D4800BD45AE /* UnderlineTextField.swift */; };
+		637E22C41F22528200BD45AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 637E22C31F22528200BD45AE /* GoogleService-Info.plist */; };
+		63BA554D1F1DF64B00427156 /* FuelCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA554C1F1DF64B00427156 /* FuelCellViewModel.swift */; };
+		63BB839B1F236038006E0E13 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB839A1F236038006E0E13 /* UIImageView.swift */; };
+		63BB839D1F2384D2006E0E13 /* CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB839C1F2384D2006E0E13 /* CLLocation.swift */; };
+		63BB839F1F23852C006E0E13 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB839E1F23852C006E0E13 /* Protocols.swift */; };
+		63BB83A11F23858F006E0E13 /* FuelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BB83A01F23858F006E0E13 /* FuelListModel.swift */; };
+		63C70CCB1F21E5B800B63E32 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C70CCA1F21E5B800B63E32 /* ListViewModel.swift */; };
+		63C70CD11F2203F200B63E32 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C70CCD1F2203F200B63E32 /* UITableViewCell+Extensions.swift */; };
+		63C70CD21F2203F200B63E32 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C70CCE1F2203F200B63E32 /* NibLoadableView.swift */; };
+		63C70CD31F2203F200B63E32 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C70CCF1F2203F200B63E32 /* ReusableView.swift */; };
+		63C70CD41F2203F200B63E32 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C70CD01F2203F200B63E32 /* UITableView+Extensions.swift */; };
+		63CF90291F19FB5900AF2688 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CF90281F19FB5900AF2688 /* CustomSegmentedControl.swift */; };
+		63D087B41F1ACCA200E540C1 /* FuelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D087B21F1ACCA200E540C1 /* FuelTableViewCell.swift */; };
+		63D087B51F1ACCA200E540C1 /* FuelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D087B31F1ACCA200E540C1 /* FuelTableViewCell.xib */; };
+		63D087B91F1B59CB00E540C1 /* HelveticaNeueCyr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63D087B61F1B59CB00E540C1 /* HelveticaNeueCyr-Light.otf */; };
+		63D087BA1F1B59CB00E540C1 /* HelveticaNeueCyr-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63D087B71F1B59CB00E540C1 /* HelveticaNeueCyr-Roman.otf */; };
+		63D087C11F1B5D5800E540C1 /* CustomBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D087C01F1B5D5800E540C1 /* CustomBackground.swift */; };
+		63E3BCBE1F1D10B6005757A5 /* MarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E3BCBD1F1D10B6005757A5 /* MarkerView.xib */; };
+		63E3BCC01F1D4A30005757A5 /* MarkerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E3BCBF1F1D4A30005757A5 /* MarkerBackground.swift */; };
+		63E9566A1F1E8471006B4CF2 /* HelveticaNeueCyr-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63E956691F1E8471006B4CF2 /* HelveticaNeueCyr-LightItalic.otf */; };
+		63F18DB61F1910D1003E6D3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F18DB51F1910D1003E6D3B /* AppDelegate.swift */; };
+		63F18DBB1F1910D1003E6D3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F18DB91F1910D1003E6D3B /* Main.storyboard */; };
+		63F18DBD1F1910D1003E6D3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F18DBC1F1910D1003E6D3B /* Assets.xcassets */; };
+		63F18DC01F1910D1003E6D3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F18DBE1F1910D1003E6D3B /* LaunchScreen.storyboard */; };
+		ABDA0BBF3AE9BE31C4CA2E02 /* Pods_FuelBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FBD52DED478E0CA2928AE6 /* Pods_FuelBuddy.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02FBD52DED478E0CA2928AE6 /* Pods_FuelBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuelBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5242DE9346384175C0332A /* Pods-FuelBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuelBuddy/Pods-FuelBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		633DD5891F1C989600CF899D /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		633DD58B1F1CDD8400CF899D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		633DD58D1F1CEFA400CF899D /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		633DD5911F1D08BD00CF899D /* Fuel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fuel.swift; sourceTree = "<group>"; };
+		634DB3A01F1B88C500310973 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		634DB3A21F1B903200310973 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		634DB3A41F1B98F500310973 /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		637E22B91F220F3400BD45AE /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		637E22BB1F221BE900BD45AE /* MarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerView.swift; sourceTree = "<group>"; };
+		637E22BF1F2248C700BD45AE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		637E22C11F224D4800BD45AE /* UnderlineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
+		637E22C31F22528200BD45AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		63BA554C1F1DF64B00427156 /* FuelCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuelCellViewModel.swift; sourceTree = "<group>"; };
+		63BB839A1F236038006E0E13 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		63BB839C1F2384D2006E0E13 /* CLLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocation.swift; sourceTree = "<group>"; };
+		63BB839E1F23852C006E0E13 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		63BB83A01F23858F006E0E13 /* FuelListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuelListModel.swift; sourceTree = "<group>"; };
+		63C70CCA1F21E5B800B63E32 /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		63C70CCD1F2203F200B63E32 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		63C70CCE1F2203F200B63E32 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		63C70CCF1F2203F200B63E32 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		63C70CD01F2203F200B63E32 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		63CF90281F19FB5900AF2688 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		63D087B21F1ACCA200E540C1 /* FuelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuelTableViewCell.swift; sourceTree = "<group>"; };
+		63D087B31F1ACCA200E540C1 /* FuelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FuelTableViewCell.xib; sourceTree = "<group>"; };
+		63D087B61F1B59CB00E540C1 /* HelveticaNeueCyr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueCyr-Light.otf"; sourceTree = "<group>"; };
+		63D087B71F1B59CB00E540C1 /* HelveticaNeueCyr-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueCyr-Roman.otf"; sourceTree = "<group>"; };
+		63D087C01F1B5D5800E540C1 /* CustomBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBackground.swift; sourceTree = "<group>"; };
+		63E3BCBD1F1D10B6005757A5 /* MarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerView.xib; sourceTree = "<group>"; };
+		63E3BCBF1F1D4A30005757A5 /* MarkerBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerBackground.swift; sourceTree = "<group>"; };
+		63E956691F1E8471006B4CF2 /* HelveticaNeueCyr-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNeueCyr-LightItalic.otf"; sourceTree = "<group>"; };
+		63F18DB21F1910D1003E6D3B /* FuelBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F18DB51F1910D1003E6D3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63F18DBA1F1910D1003E6D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63F18DBC1F1910D1003E6D3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63F18DBF1F1910D1003E6D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63F18DC11F1910D1003E6D3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81691C9EFE7DBAC038C1E864 /* Pods-FuelBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuelBuddy/Pods-FuelBuddy.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63F18DAF1F1910D1003E6D3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDA0BBF3AE9BE31C4CA2E02 /* Pods_FuelBuddy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E80377D786B605ADF10B3C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02FBD52DED478E0CA2928AE6 /* Pods_FuelBuddy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53109571AE87CD0D1950FC0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F5242DE9346384175C0332A /* Pods-FuelBuddy.debug.xcconfig */,
+				81691C9EFE7DBAC038C1E864 /* Pods-FuelBuddy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		63BEEFB81F1E5C770037A713 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				63D087C01F1B5D5800E540C1 /* CustomBackground.swift */,
+				63CF90281F19FB5900AF2688 /* CustomSegmentedControl.swift */,
+				633DD58B1F1CDD8400CF899D /* GradientView.swift */,
+				63E3BCBF1F1D4A30005757A5 /* MarkerBackground.swift */,
+				633DD58D1F1CEFA400CF899D /* SearchTextField.swift */,
+				637E22C11F224D4800BD45AE /* UnderlineTextField.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		63BEEFB91F1E5C9D0037A713 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				634DB3A41F1B98F500310973 /* ColorPalette.swift */,
+				633DD5891F1C989600CF899D /* Font.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		63BEEFBA1F1E5CC00037A713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63D087BE1F1B5D0700E540C1 /* FuelTableViewCell */,
+				634DB3A21F1B903200310973 /* ListViewController.swift */,
+				637E22BF1F2248C700BD45AE /* LoginViewController.swift */,
+				634DB3A01F1B88C500310973 /* MapViewController.swift */,
+				637E22BB1F221BE900BD45AE /* MarkerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63BEEFBB1F1E5CD50037A713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				633DD5911F1D08BD00CF899D /* Fuel.swift */,
+				63BB83A01F23858F006E0E13 /* FuelListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63BEEFBC1F1E5CE50037A713 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				63BA554C1F1DF64B00427156 /* FuelCellViewModel.swift */,
+				63C70CCA1F21E5B800B63E32 /* ListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		63C70CCC1F2203D800B63E32 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63BB839C1F2384D2006E0E13 /* CLLocation.swift */,
+				637E22B91F220F3400BD45AE /* DateHelper.swift */,
+				63C70CCE1F2203F200B63E32 /* NibLoadableView.swift */,
+				63C70CCF1F2203F200B63E32 /* ReusableView.swift */,
+				63BB839A1F236038006E0E13 /* UIImageView.swift */,
+				63C70CD01F2203F200B63E32 /* UITableView+Extensions.swift */,
+				63C70CCD1F2203F200B63E32 /* UITableViewCell+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		63D087BC1F1B5CC400E540C1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				63D087B61F1B59CB00E540C1 /* HelveticaNeueCyr-Light.otf */,
+				63E956691F1E8471006B4CF2 /* HelveticaNeueCyr-LightItalic.otf */,
+				63D087B71F1B59CB00E540C1 /* HelveticaNeueCyr-Roman.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		63D087BD1F1B5CCC00E540C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63D087BC1F1B5CC400E540C1 /* Font */,
+				63F18DBC1F1910D1003E6D3B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		63D087BE1F1B5D0700E540C1 /* FuelTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				63D087B21F1ACCA200E540C1 /* FuelTableViewCell.swift */,
+				63D087B31F1ACCA200E540C1 /* FuelTableViewCell.xib */,
+			);
+			path = FuelTableViewCell;
+			sourceTree = "<group>";
+		};
+		63D087BF1F1B5D1500E540C1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				63BEEFB91F1E5C9D0037A713 /* Utilities */,
+				63F18DB51F1910D1003E6D3B /* AppDelegate.swift */,
+				637E22C31F22528200BD45AE /* GoogleService-Info.plist */,
+				63F18DC11F1910D1003E6D3B /* Info.plist */,
+				63F18DBE1F1910D1003E6D3B /* LaunchScreen.storyboard */,
+				63F18DB91F1910D1003E6D3B /* Main.storyboard */,
+				63E3BCBD1F1D10B6005757A5 /* MarkerView.xib */,
+				63BB839E1F23852C006E0E13 /* Protocols.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		63F18DA91F1910D1003E6D3B = {
+			isa = PBXGroup;
+			children = (
+				63F18DB41F1910D1003E6D3B /* FuelBuddy */,
+				53109571AE87CD0D1950FC0C /* Pods */,
+				63F18DB31F1910D1003E6D3B /* Products */,
+				3E80377D786B605ADF10B3C2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63F18DB31F1910D1003E6D3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63F18DB21F1910D1003E6D3B /* FuelBuddy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63F18DB41F1910D1003E6D3B /* FuelBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				63D087BF1F1B5D1500E540C1 /* Application */,
+				63BEEFB81F1E5C770037A713 /* CustomUI */,
+				63C70CCC1F2203D800B63E32 /* Extensions */,
+				63BEEFBB1F1E5CD50037A713 /* Model */,
+				63D087BD1F1B5CCC00E540C1 /* Resources */,
+				63BEEFBA1F1E5CC00037A713 /* View */,
+				63BEEFBC1F1E5CE50037A713 /* ViewModel */,
+			);
+			path = FuelBuddy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63F18DB11F1910D1003E6D3B /* FuelBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63F18DC41F1910D1003E6D3B /* Build configuration list for PBXNativeTarget "FuelBuddy" */;
+			buildPhases = (
+				71509469763B0F9A811B800D /* [CP] Check Pods Manifest.lock */,
+				63F18DAE1F1910D1003E6D3B /* Sources */,
+				63F18DAF1F1910D1003E6D3B /* Frameworks */,
+				63F18DB01F1910D1003E6D3B /* Resources */,
+				004F5F1228B701FDBA268F42 /* [CP] Embed Pods Frameworks */,
+				2729D86C03EC2C9CAC0CA3FA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuelBuddy;
+			productName = FuelBuddy;
+			productReference = 63F18DB21F1910D1003E6D3B /* FuelBuddy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63F18DAA1F1910D1003E6D3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = pavlyukova.ekaterina;
+				TargetAttributes = {
+					63F18DB11F1910D1003E6D3B = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = X87NG9BLPP;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 63F18DAD1F1910D1003E6D3B /* Build configuration list for PBXProject "FuelBuddy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63F18DA91F1910D1003E6D3B;
+			productRefGroup = 63F18DB31F1910D1003E6D3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63F18DB11F1910D1003E6D3B /* FuelBuddy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63F18DB01F1910D1003E6D3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D087B91F1B59CB00E540C1 /* HelveticaNeueCyr-Light.otf in Resources */,
+				63F18DC01F1910D1003E6D3B /* LaunchScreen.storyboard in Resources */,
+				637E22C41F22528200BD45AE /* GoogleService-Info.plist in Resources */,
+				63D087B51F1ACCA200E540C1 /* FuelTableViewCell.xib in Resources */,
+				63F18DBD1F1910D1003E6D3B /* Assets.xcassets in Resources */,
+				63E9566A1F1E8471006B4CF2 /* HelveticaNeueCyr-LightItalic.otf in Resources */,
+				63E3BCBE1F1D10B6005757A5 /* MarkerView.xib in Resources */,
+				63F18DBB1F1910D1003E6D3B /* Main.storyboard in Resources */,
+				63D087BA1F1B59CB00E540C1 /* HelveticaNeueCyr-Roman.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		004F5F1228B701FDBA268F42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuelBuddy/Pods-FuelBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2729D86C03EC2C9CAC0CA3FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuelBuddy/Pods-FuelBuddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71509469763B0F9A811B800D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63F18DAE1F1910D1003E6D3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				637E22C01F2248C700BD45AE /* LoginViewController.swift in Sources */,
+				63D087B41F1ACCA200E540C1 /* FuelTableViewCell.swift in Sources */,
+				63C70CD31F2203F200B63E32 /* ReusableView.swift in Sources */,
+				63BB839D1F2384D2006E0E13 /* CLLocation.swift in Sources */,
+				63E3BCC01F1D4A30005757A5 /* MarkerBackground.swift in Sources */,
+				63BB839F1F23852C006E0E13 /* Protocols.swift in Sources */,
+				637E22C21F224D4800BD45AE /* UnderlineTextField.swift in Sources */,
+				633DD5921F1D08BD00CF899D /* Fuel.swift in Sources */,
+				633DD58C1F1CDD8400CF899D /* GradientView.swift in Sources */,
+				633DD58A1F1C989600CF899D /* Font.swift in Sources */,
+				63C70CCB1F21E5B800B63E32 /* ListViewModel.swift in Sources */,
+				634DB3A51F1B98F500310973 /* ColorPalette.swift in Sources */,
+				637E22BC1F221BEA00BD45AE /* MarkerView.swift in Sources */,
+				63F18DB61F1910D1003E6D3B /* AppDelegate.swift in Sources */,
+				637E22BA1F220F3400BD45AE /* DateHelper.swift in Sources */,
+				63C70CD41F2203F200B63E32 /* UITableView+Extensions.swift in Sources */,
+				63C70CD21F2203F200B63E32 /* NibLoadableView.swift in Sources */,
+				63C70CD11F2203F200B63E32 /* UITableViewCell+Extensions.swift in Sources */,
+				63BA554D1F1DF64B00427156 /* FuelCellViewModel.swift in Sources */,
+				63BB83A11F23858F006E0E13 /* FuelListModel.swift in Sources */,
+				63D087C11F1B5D5800E540C1 /* CustomBackground.swift in Sources */,
+				63CF90291F19FB5900AF2688 /* CustomSegmentedControl.swift in Sources */,
+				63BB839B1F236038006E0E13 /* UIImageView.swift in Sources */,
+				634DB3A31F1B903200310973 /* ListViewController.swift in Sources */,
+				634DB3A11F1B88C500310973 /* MapViewController.swift in Sources */,
+				633DD58E1F1CEFA400CF899D /* SearchTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63F18DB91F1910D1003E6D3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63F18DBA1F1910D1003E6D3B /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		63F18DBE1F1910D1003E6D3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63F18DBF1F1910D1003E6D3B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63F18DC21F1910D1003E6D3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63F18DC31F1910D1003E6D3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63F18DC51F1910D1003E6D3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F5242DE9346384175C0332A /* Pods-FuelBuddy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X87NG9BLPP;
+				INFOPLIST_FILE = FuelBuddy/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kate.pavlyukova.FuelBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		63F18DC61F1910D1003E6D3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81691C9EFE7DBAC038C1E864 /* Pods-FuelBuddy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X87NG9BLPP;
+				INFOPLIST_FILE = FuelBuddy/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kate.pavlyukova.FuelBuddy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63F18DAD1F1910D1003E6D3B /* Build configuration list for PBXProject "FuelBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F18DC21F1910D1003E6D3B /* Debug */,
+				63F18DC31F1910D1003E6D3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63F18DC41F1910D1003E6D3B /* Build configuration list for PBXNativeTarget "FuelBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63F18DC51F1910D1003E6D3B /* Debug */,
+				63F18DC61F1910D1003E6D3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63F18DAA1F1910D1003E6D3B /* Project object */;
+}

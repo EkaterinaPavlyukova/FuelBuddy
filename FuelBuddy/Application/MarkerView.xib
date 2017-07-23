@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueCyr-Roman.otf">
+            <string>HelveticaNeueCyr-Roman</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MarkerView" customModule="FuelBuddy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="201" height="47"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJv-Fa-g4r" customClass="MarkerBackground" customModule="FuelBuddy" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="198" height="36"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ул. Садовническая, 57" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="bM2-3N-vco">
+                            <rect key="frame" x="35" y="0.0" width="106" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeueCyr-Roman" family="HelveticaNeueCyr" pointSize="9"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="35.5 P" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="74U-B6-Axx">
+                            <rect key="frame" x="35" y="17" width="106" height="13"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeueCyr-Roman" family="HelveticaNeueCyr" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shall" translatesAutoresizingMaskIntoConstraints="NO" id="19W-AP-zHm">
+                            <rect key="frame" x="8" y="8" width="15" height="15"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-za-m7y">
+                            <rect key="frame" x="149" y="8" width="16" height="15"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="like"/>
+                            <connections>
+                                <action selector="likeTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lms-VO-6Zx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0g-AU-Mti">
+                            <rect key="frame" x="175" y="8" width="15" height="15"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="direction"/>
+                            <connections>
+                                <action selector="destinationTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="87l-9q-C0Z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addressLabel" destination="bM2-3N-vco" id="F2r-6d-cRl"/>
+                <outlet property="logoimageView" destination="19W-AP-zHm" id="8iJ-Gy-Q6G"/>
+                <outlet property="priceLabel" destination="74U-B6-Axx" id="O5P-Fo-7dS"/>
+            </connections>
+            <point key="canvasLocation" x="48.5" y="-255.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="direction" width="30" height="30"/>
+        <image name="like" width="32" height="30"/>
+        <image name="shall" width="25" height="25"/>
+    </resources>
+</document>
