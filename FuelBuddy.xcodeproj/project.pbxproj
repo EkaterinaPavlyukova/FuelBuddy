@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EF0EF551F28870200F02849 /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF0EF541F28870200F02849 /* TransparentNavigationBar.swift */; };
 		633DD58A1F1C989600CF899D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DD5891F1C989600CF899D /* Font.swift */; };
 		633DD58C1F1CDD8400CF899D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DD58B1F1CDD8400CF899D /* GradientView.swift */; };
 		633DD58E1F1CEFA400CF899D /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DD58D1F1CEFA400CF899D /* SearchTextField.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		02FBD52DED478E0CA2928AE6 /* Pods_FuelBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuelBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5242DE9346384175C0332A /* Pods-FuelBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuelBuddy/Pods-FuelBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		4EF0EF541F28870200F02849 /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
 		633DD5891F1C989600CF899D /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		633DD58B1F1CDD8400CF899D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		633DD58D1F1CEFA400CF899D /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				63D087C01F1B5D5800E540C1 /* CustomBackground.swift */,
+				4EF0EF541F28870200F02849 /* TransparentNavigationBar.swift */,
 				63CF90281F19FB5900AF2688 /* CustomSegmentedControl.swift */,
 				633DD58B1F1CDD8400CF899D /* GradientView.swift */,
 				63E3BCBF1F1D4A30005757A5 /* MarkerBackground.swift */,
@@ -390,6 +393,7 @@
 			files = (
 				637E22C01F2248C700BD45AE /* LoginViewController.swift in Sources */,
 				63D087B41F1ACCA200E540C1 /* FuelTableViewCell.swift in Sources */,
+				4EF0EF551F28870200F02849 /* TransparentNavigationBar.swift in Sources */,
 				63C70CD31F2203F200B63E32 /* ReusableView.swift in Sources */,
 				63BB839D1F2384D2006E0E13 /* CLLocation.swift in Sources */,
 				63E3BCC01F1D4A30005757A5 /* MarkerBackground.swift in Sources */,
