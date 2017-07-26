@@ -16,11 +16,13 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+    let appKey = "AIzaSyDoc8lw2mFtvOPk_SLQ3n8piHc_DwKcTUw"
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		GMSServices.provideAPIKey("AIzaSyDoc8lw2mFtvOPk_SLQ3n8piHc_DwKcTUw")
-		GMSPlacesClient.provideAPIKey("AIzaSyDoc8lw2mFtvOPk_SLQ3n8piHc_DwKcTUw")
+		GMSServices.provideAPIKey(appKey)
+		GMSPlacesClient.provideAPIKey(appKey)
 		FirebaseApp.configure()
+
 		return true
 	}
 

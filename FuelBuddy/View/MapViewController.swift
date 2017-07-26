@@ -21,11 +21,6 @@ private let shownRowCount = 4
 private let oneRowHeight:CGFloat = 60
 
 
-
-protocol SortDelegate: class {
-	func sortWith(_ sort:Sort)
-}
-
 class MapViewController: UIViewController {
 	
 	@IBOutlet weak var listHeader: CustomBackground!
@@ -34,7 +29,6 @@ class MapViewController: UIViewController {
 	@IBOutlet weak var searchTextField: SearchTextField!
 	
 	var viewModel : ListViewModel<FuelListModel>?
-	weak var sortDelegate: SortDelegate?
 
 	var map: GMSMapView?
 	var locationManager = CLLocationManager()
@@ -54,10 +48,10 @@ class MapViewController: UIViewController {
 		
 		initializeTheLocationManager()
 		configureGestureRecognizers()
-		setupNavigationBar()
 		checkIfUserLoggedIn()
 		createObserverForDrawingRoute()
 		searchTextField.searchTextFieldDelegate = self
+		searchTextField.delegate = self
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -65,9 +59,9 @@ class MapViewController: UIViewController {
 			guard let vc = segue.destination as? ListViewController else {
 				fatalError("Couldn't find segue identifier")
 			}
-			sortDelegate = vc
 			viewModel = ListViewModel<FuelListModel>(model: FuelListModel())
 			vc.viewModel = viewModel
+
 			
 		}
 	}
@@ -202,24 +196,14 @@ class MapViewController: UIViewController {
 	
 	}
 	
-	private func setupNavigationBar() {
-		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-		self.navigationController?.navigationBar.shadowImage = UIImage()
-		self.navigationController?.navigationItem.title = ""
-		self.navigationController?.navigationBar.isTranslucent = true
-		self.navigationController?.navigationBar.barTintColor = UIColor.clear
-		self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-		self.navigationController?.navigationBar.tintColor = UIColor.white
-		
-	}
-
 	//MARK: - Segment value changed
 	@IBAction func segmentValueChanged(_ sender: CustomSegmentedControl) {
 		switch sender.selectedIndex{
 		case 0:
 			guard currentLocation != nil else { break }
-			sortDelegate?.sortWith(.distance(currentLocation!))
-		case 1: sortDelegate?.sortWith(.cost)
+			viewModel?.sort(parameter: .distance(currentLocation!))
+			//sortDelegate?.sortWith(.distance(currentLocation!))
+		case 1: viewModel?.sort(parameter: .cost)
 		default:break
 		}
 		
@@ -324,7 +308,12 @@ extension MapViewController: SearchTextFieldDelegate {
 
 		}
 }
-
+extension MapViewController: UITextFieldDelegate {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		return true
+	}
+}
 extension MapViewController: CLLocationManagerDelegate {
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
 		debugPrint(error.localizedDescription)

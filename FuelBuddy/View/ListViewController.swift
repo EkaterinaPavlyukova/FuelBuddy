@@ -36,13 +36,6 @@ class ListViewController: UIViewController {
 	
 }
 
-extension ListViewController: SortDelegate {
-	func sortWith(_ sort: Sort) {
-		viewModel?.sort(parameter: sort)
-	}
-}
-
-
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel?.count() ?? 0

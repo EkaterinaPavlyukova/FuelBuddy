@@ -27,7 +27,6 @@ class FuelCellViewModel {
 	init(fuel: Fuel, currentLocation: CLLocationCoordinate2D? = nil) {
 		self.fuel = fuel
 		self.currentLocation = currentLocation
-		//findAddress()
 	}
 	func findAddress(completion:@escaping ()->()) {
 		let geocoder = GMSGeocoder()
@@ -36,8 +35,6 @@ class FuelCellViewModel {
 			DispatchQueue.main.async {
 				self?.address = response?.firstResult()?.lines?.first
 				completion()
-			//	self?.didUpdate?()
-
 			}
 		}
 
@@ -51,7 +48,7 @@ class FuelCellViewModel {
 		guard let currentLocation = currentLocation else {
 			return ""
 		}
-		let distance = CLLocation.distance(from: currentLocation, to: fuel.coordinate) / 1000
+		let distance = CLLocation.distance(from: currentLocation, to: fuel.coordinate)/1000
 		let strDistance = String(format:"%.1f km", distance)
 		return strDistance
 	}
