@@ -26,26 +26,34 @@ enum Enter: String {
 
 class LoginViewController: UIViewController {
 	
-	@IBOutlet weak var avatarImageView: UIImageView!
 	@IBOutlet weak var nameTextFieldHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var inputViewHeightConstraint: NSLayoutConstraint!
+
 	@IBOutlet weak var loginSignUpbutton: UIBarButtonItem!
 	@IBOutlet weak var registrationButton: UIButton!
+
 	@IBOutlet weak var emailTextField: UnderLinedTextField!
 	@IBOutlet weak var nameTextField: UnderLinedTextField!
 	@IBOutlet weak var passwordTextField: UnderLinedTextField!
+
 	@IBOutlet weak var inputContanerView: UIView!
+	@IBOutlet weak var scrollView: UIScrollView!
+
+	@IBOutlet weak var avatarButton: UIButton!
+	 
+	var nameTextFieldHeight: CGFloat = 0.0
+	var inputViewHeight: CGFloat = 0.0
 	
 	var ref: DatabaseReference!
 	
 	var enter: Enter? {
 		didSet{
-			
+
 			let title: String = enter == .login ? Enter.signUp.rawValue : Enter.login.rawValue
-			let	inputConstant: CGFloat = enter == .login ? 100 : 150
-			let	nameConstant: CGFloat = enter == .login ? 0 : 50
-			update(loginSignUpTitle: title, inputConstant: inputConstant, nameConstant: nameConstant)
-			
+			let	inputViewConstant: CGFloat = enter == .login ? inputViewHeight - nameTextFieldHeight : inputViewHeight
+			let	nameConstant: CGFloat = enter == .login ? 0 : nameTextFieldHeight
+			update(loginSignUpTitle: title, inputViewConstant: inputViewConstant, nameConstant: nameConstant)
+
 		}
 	}
 
@@ -55,13 +63,54 @@ class LoginViewController: UIViewController {
 		super.viewDidLoad()
 		
 		configureInputViewContaner()
-		setupNavigationBar()
+		observeKeyboardAppearance()
+		addGestureForHideKeyBoard()
 		
 		enter = .signUp
+		nameTextFieldHeight = nameTextField.frame.height
+		inputViewHeight = inputContanerView.frame.height
+		inputViewHeightConstraint.constant = inputViewHeight
+		nameTextFieldHeightConstraint.constant = nameTextFieldHeight
+
+
 		ref = Database.database().reference(fromURL: "https://fuelbuddy-e0ab6.firebaseio.com/")
 		
 	}
-	
+
+	func observeKeyboardAppearance() {
+		NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)), name: .UIKeyboardWillHide, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)), name: .UIKeyboardWillShow, object: nil)
+	}
+
+	func handleKeyboard(notification: Notification) {
+		if let userInfo = notification.userInfo {
+
+			guard let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue else { return }
+			print(keyboardFrame)
+
+			if notification.name == .UIKeyboardWillShow {
+				scrollView.contentInset.bottom = keyboardFrame.size.height
+				scrollView.scrollRectToVisible(registrationButton.frame, animated: true)
+				scrollView.scrollIndicatorInsets = scrollView.contentInset
+			} else {
+				scrollView.contentInset = .zero
+				scrollView.scrollIndicatorInsets = scrollView.contentInset
+			}
+
+		}
+
+	}
+
+	func addGestureForHideKeyBoard() {
+		let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+		tapGesture.cancelsTouchesInView = false
+		view.addGestureRecognizer(tapGesture)
+	}
+
+	func hideKeyboard() {
+		view.endEditing(true)
+	}
+
 	func login(email: String, password: String) {
 		Auth.auth().signIn(withEmail: email, password: password) { [weak self] (user, error) in
 			guard let strongSelf = self else { return }
@@ -101,8 +150,10 @@ class LoginViewController: UIViewController {
 			}
 			let imageName = NSUUID().uuidString
 			let storageRef = Storage.storage().reference().child("profile_images").child("\(imageName).png")
+
+			let image = strongSelf.avatarButton.imageView?.image
 			
-			if	let uploadData = UIImagePNGRepresentation((strongSelf.avatarImageView.image)!){
+			if	let uploadData = UIImagePNGRepresentation(image!){
 				
 				storageRef.putData(uploadData, metadata: nil, completion: { [weak self](metadata, error) in
 					
@@ -132,7 +183,7 @@ class LoginViewController: UIViewController {
 
 	}
 	
-	@IBAction func avatarTapped(_ sender: UITapGestureRecognizer) {
+	@IBAction func avatarTapped(_ sender: UIButton) {
 		let controller = UIAlertController(title: "Add your photo", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
 		controller.addAction(
 			UIAlertAction(title: "Camera", style: UIAlertActionStyle.default, handler: { (action) -> Void in
@@ -162,7 +213,7 @@ class LoginViewController: UIViewController {
 
 			})
 			
-			showAlert(title: "Необходимо заполнить све поля", message: "Проверьте и повторите попытку", actions: [action])
+			showAlert(title: "Необходимо заполнить все поля", message: "Проверьте и повторите попытку", actions: [action])
 			
 			return
 		}
@@ -183,28 +234,17 @@ class LoginViewController: UIViewController {
 	}
 	
 	//MARK: - Private Methods
-	private func update(loginSignUpTitle: String, inputConstant: CGFloat, nameConstant: CGFloat ){
+	private func update(loginSignUpTitle: String, inputViewConstant: CGFloat, nameConstant: CGFloat ){
 		registrationButton.alpha = 0
 		loginSignUpbutton.title = loginSignUpTitle
 		UIView.animate(withDuration: 0.5, animations: {
 			self.registrationButton.setTitle(self.enter?.rawValue, for: .normal)
 			self.registrationButton.alpha = 1
-			self.inputViewHeightConstraint.constant = inputConstant
+			self.inputViewHeightConstraint.constant = inputViewConstant
 			self.nameTextFieldHeightConstraint.constant = nameConstant
 		})
 	}
-	
-	private func setupNavigationBar() {
-		self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-		self.navigationController?.navigationBar.shadowImage = UIImage()
-		self.navigationController?.navigationItem.title = ""
-		self.navigationController?.navigationBar.isTranslucent = true
-		self.navigationController?.navigationBar.barTintColor = UIColor.clear
-		self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-		self.navigationController?.navigationBar.tintColor = UIColor.white
-		
-	}
-	
+
 	private func configureInputViewContaner() {
 		inputContanerView.layer.cornerRadius = 10
 		inputContanerView.layer.masksToBounds = true
@@ -243,9 +283,8 @@ extension LoginViewController: UIImagePickerControllerDelegate, UINavigationCont
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
 		if info[UIImagePickerControllerMediaType] as? String == "public.image" {
 			if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-				self.avatarImageView.contentMode = .scaleAspectFill
-				self.avatarImageView.image = image
-				self.avatarImageView.circleWithImage()
+				avatarButton.setImage(image, for: .normal)
+				avatarButton.imageView?.circleWithImage()
 			}
 		} else {
 			debugPrint("error - loading phoho failed")
