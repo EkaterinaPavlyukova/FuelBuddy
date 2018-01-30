@@ -19,9 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let appKey = "AIzaSyDoc8lw2mFtvOPk_SLQ3n8piHc_DwKcTUw"
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        print("New line")
 		GMSServices.provideAPIKey(appKey)
 		GMSPlacesClient.provideAPIKey(appKey)
-		FirebaseApp.configure()
+        
+        print("New line to commit")
 
 		return true
 	}
