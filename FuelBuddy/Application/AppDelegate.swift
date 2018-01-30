@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        print("Pull request from GK")
+        
     }
 
 }
