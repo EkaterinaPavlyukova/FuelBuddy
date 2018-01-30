@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		GMSPlacesClient.provideAPIKey(appKey)
         
         print("New line to commit")
+		FirebaseApp.configure()
+        print("New line other string")
 
 		return true
 	}
