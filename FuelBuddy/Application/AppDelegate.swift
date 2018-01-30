@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("New line")
 		GMSServices.provideAPIKey(appKey)
 		GMSPlacesClient.provideAPIKey(appKey)
+        
+        print("New line to commit")
 
 		return true
 	}
